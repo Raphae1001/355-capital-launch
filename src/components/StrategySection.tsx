@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import GlassCard from "./GlassCard";
 import { Shield, Cpu, Rocket, Zap, Crosshair, GitBranch, Repeat } from "lucide-react";
 
 const sectors = [
@@ -24,10 +25,10 @@ const StrategySection = () => (
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-10">
             {sectors.map((s, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
-                <div className="glass rounded-lg p-5 flex flex-col items-center gap-3 hover-lift">
+                <GlassCard breathe className="p-5 flex flex-col items-center gap-3">
                   <s.icon className="w-6 h-6 text-primary" />
                   <span className="text-sm font-medium">{s.name}</span>
-                </div>
+                </GlassCard>
               </ScrollReveal>
             ))}
           </div>
@@ -42,7 +43,7 @@ const StrategySection = () => (
           </ScrollReveal>
           <div className="mt-10 space-y-4">
             <ScrollReveal delay={0.3}>
-              <div className="glass rounded-xl p-6 hover-lift">
+              <GlassCard className="p-6">
                 <div className="flex items-center gap-4 mb-3">
                   <GitBranch className="w-5 h-5 text-primary" />
                   <h3 className="font-bold text-lg">Primary: Pre-seed & Series A</h3>
@@ -50,10 +51,10 @@ const StrategySection = () => (
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   Early conviction bets with hands-on support to accelerate growth.
                 </p>
-              </div>
+              </GlassCard>
             </ScrollReveal>
             <ScrollReveal delay={0.4}>
-              <div className="glass rounded-xl p-6 hover-lift">
+              <GlassCard className="p-6">
                 <div className="flex items-center gap-4 mb-3">
                   <Repeat className="w-5 h-5 text-primary" />
                   <h3 className="font-bold text-lg">Opportunistic Secondary</h3>
@@ -61,7 +62,7 @@ const StrategySection = () => (
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   De-risked entry into proven winners at attractive valuations.
                 </p>
-              </div>
+              </GlassCard>
             </ScrollReveal>
           </div>
         </div>
