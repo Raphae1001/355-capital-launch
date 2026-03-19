@@ -11,8 +11,8 @@ const TacticalBackground = () => {
 
     let animationId: number;
     let dots: { x: number; y: number; vx: number; vy: number }[] = [];
-    const DOT_COUNT = 60;
-    const CONNECTION_DIST = 120;
+    const DOT_COUNT = 150;
+    const CONNECTION_DIST = 160;
     const RADAR_INTERVAL = 12000;
     const RADAR_DURATION = 4000;
     const RADAR_X_RATIO = 0.15;
@@ -27,13 +27,21 @@ const TacticalBackground = () => {
       dots = Array.from({ length: DOT_COUNT }, () => ({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
+        vx: (Math.random() - 0.5) * 1.5,
+        vy: (Math.random() - 0.5) * 1.5,
       }));
     };
 
     resize();
     initDots();
+
+    const mouse = { x: -1000, y: -1000 };
+    const handleMouseMove = (e: MouseEvent) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+
     window.addEventListener("resize", () => {
       resize();
       initDots();
@@ -48,13 +56,33 @@ const TacticalBackground = () => {
       for (const dot of dots) {
         dot.x += dot.vx;
         dot.y += dot.vy;
+
+        const dx = dot.x - mouse.x;
+        const dy = dot.y - mouse.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        
+        if (dist < 300) {
+          const force = (300 - dist) / 300;
+          dot.vx += (dx / dist) * force * 2.0;
+          dot.vy += (dy / dist) * force * 2.0;
+        }
+
+        const speed = Math.sqrt(dot.vx * dot.vx + dot.vy * dot.vy);
+        if (speed > 4.0) {
+          dot.vx = (dot.vx / speed) * 4.0;
+          dot.vy = (dot.vy / speed) * 4.0;
+        } else if (speed < 0.5) {
+          dot.vx *= 1.05;
+          dot.vy *= 1.05;
+        }
+
         if (dot.x < 0 || dot.x > canvas.width) dot.vx *= -1;
         if (dot.y < 0 || dot.y > canvas.height) dot.vy *= -1;
       }
 
       // connections
-      ctx.strokeStyle = "rgba(45,212,150,0.035)";
-      ctx.lineWidth = 0.5;
+      ctx.strokeStyle = "rgba(14,165,233,0.15)";
+      ctx.lineWidth = 0.8;
       for (let i = 0; i < dots.length; i++) {
         for (let j = i + 1; j < dots.length; j++) {
           const dx = dots[i].x - dots[j].x;
@@ -69,7 +97,7 @@ const TacticalBackground = () => {
       }
 
       // dots
-      ctx.fillStyle = "rgba(45,212,150,0.05)";
+      ctx.fillStyle = "rgba(14,165,233,0.5)";
       for (const dot of dots) {
         ctx.beginPath();
         ctx.arc(dot.x, dot.y, 1.2, 0, Math.PI * 2);
@@ -88,8 +116,8 @@ const TacticalBackground = () => {
           const ringProgress = Math.max(0, progress - ring * 0.15);
           if (ringProgress <= 0) continue;
           const r = ringProgress * maxRadius;
-          const alpha = Math.max(0, 0.04 * (1 - ringProgress));
-          ctx.strokeStyle = `rgba(45,212,150,${alpha})`;
+          const alpha = Math.max(0, 0.8 * (1 - ringProgress));
+          ctx.strokeStyle = `rgba(14,165,233,${alpha})`;
           ctx.lineWidth = 1;
           ctx.beginPath();
           ctx.arc(cx, cy, r, 0, Math.PI * 2);
@@ -104,6 +132,7 @@ const TacticalBackground = () => {
     return () => {
       cancelAnimationFrame(animationId);
       window.removeEventListener("resize", resize);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 

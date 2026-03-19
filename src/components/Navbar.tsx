@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 const navLinks = [
   { label: "Strategy", href: "/strategy" },
   { label: "Track Record", href: "/track-record" },
-  { label: "Insights", href: "#insights" },
-  { label: "Team", href: "#team" },
+  { label: "Insights", href: "/insights" },
+  { label: "Team", href: "/team" },
 ];
 
 const Navbar = () => {
