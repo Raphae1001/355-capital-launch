@@ -19,7 +19,9 @@ const Footer = () => (
           <div className="flex flex-col gap-2">
             <Link to="/strategy" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Strategy</Link>
             <Link to="/track-record" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Track Record</Link>
-            <Link to="/login" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Investor Login</Link>
+            <Link to="/team" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Team</Link>
+            <Link to="/insights" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Insights</Link>
+            <Link to="/login" className="text-sm text-foreground/70 hover:text-foreground transition-colors mt-2">Investor Login</Link>
           </div>
         </div>
 
