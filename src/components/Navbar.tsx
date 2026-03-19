@@ -43,16 +43,16 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
         scrolled ? "glass shadow-lg shadow-background/50" : "bg-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-12 h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-2 z-[60]">
-          <span className="text-xl md:text-2xl font-bold tracking-tight text-foreground">
+        <Link to="/" className="flex items-center gap-2 relative z-[101]">
+          <span className="text-xl md:text-2xl font-bold tracking-tight text-foreground whitespace-nowrap">
             355<span className="text-primary">.</span>
           </span>
-          <span className="text-xs font-medium tracking-[0.3em] uppercase text-muted-foreground hidden sm:inline">
+          <span className="text-xs font-medium tracking-[0.3em] uppercase text-muted-foreground whitespace-nowrap mt-1">
             Capital
           </span>
         </Link>
@@ -80,7 +80,7 @@ const Navbar = () => {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden z-[60] text-foreground p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px]"
+          className="lg:hidden relative z-[101] text-foreground p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px]"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -95,7 +95,7 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 z-[55] bg-background/95 backdrop-blur-3xl lg:hidden flex flex-col pt-24 px-6 pb-6"
+            className="fixed inset-0 z-[100] bg-zinc-950 lg:hidden flex flex-col pt-24 px-6 pb-6"
           >
             <div className="flex flex-col gap-6 flex-1">
               {navLinks.map((link) => (
