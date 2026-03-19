@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import GlassCard from "./GlassCard";
 import { ShieldCheck, TrendingDown, Repeat } from "lucide-react";
 
 const strategies = [
@@ -20,11 +21,11 @@ const RiskSection = () => (
       <div className="grid md:grid-cols-3 gap-6 mt-16">
         {strategies.map((s, i) => (
           <ScrollReveal key={i} delay={i * 0.1}>
-            <div className="glass rounded-xl p-8 hover-lift h-full">
+            <GlassCard className="p-8 h-full">
               <s.icon className="w-8 h-8 text-primary mb-6" />
               <h3 className="text-xl font-bold mb-3">{s.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{s.desc}</p>
-            </div>
+            </GlassCard>
           </ScrollReveal>
         ))}
       </div>

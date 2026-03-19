@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight, Lock } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const stats = [
   { value: "65+", label: "Investments" },
@@ -11,16 +12,58 @@ const stats = [
 const verticals = ["Defense", "Cybersecurity", "AI", "Space"];
 
 const HeroSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const handleMove = (e: MouseEvent) => {
+      const rect = section.getBoundingClientRect();
+      setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+    };
+    const enter = () => setIsHovering(true);
+    const leave = () => setIsHovering(false);
+
+    section.addEventListener("mousemove", handleMove);
+    section.addEventListener("mouseenter", enter);
+    section.addEventListener("mouseleave", leave);
+    return () => {
+      section.removeEventListener("mousemove", handleMove);
+      section.removeEventListener("mouseenter", enter);
+      section.removeEventListener("mouseleave", leave);
+    };
+  }, []);
+
   return (
-    <section className="relative min-h-screen flex flex-col justify-center section-padding pt-32">
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen flex flex-col justify-center section-padding pt-32 overflow-hidden"
+    >
       {/* Subtle grid background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
 
+      {/* Mouse spotlight */}
+      {isHovering && (
+        <div
+          className="absolute pointer-events-none z-[1] transition-opacity duration-300"
+          style={{
+            left: mousePos.x - 200,
+            top: mousePos.y - 200,
+            width: 400,
+            height: 400,
+            background: "radial-gradient(circle, hsl(160 70% 45% / 0.06) 0%, transparent 70%)",
+          }}
+        />
+      )}
+
       {/* Accent glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-[120px] animate-pulse-glow" />
 
-      <div className="relative max-w-7xl mx-auto w-full">
+      <div className="relative max-w-7xl mx-auto w-full z-[2]">
         {/* Verticals */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,16 +122,14 @@ const HeroSection = () => {
           </Link>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="grid grid-cols-3 gap-4 mt-20 max-w-xl"
-        >
-          {stats.map((stat) => (
-            <div
+        {/* Stats — staggered */}
+        <div className="grid grid-cols-3 gap-4 mt-20 max-w-xl">
+          {stats.map((stat, i) => (
+            <motion.div
               key={stat.label}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.6, delay: 1.0 + i * 0.15, ease: "easeOut" }}
               className="glass rounded-lg p-6 text-center hover-lift"
             >
               <div className="font-mono-data text-3xl md:text-4xl font-bold text-primary">
@@ -97,9 +138,9 @@ const HeroSection = () => {
               <div className="text-xs text-muted-foreground mt-2 uppercase tracking-widest">
                 {stat.label}
               </div>
-            </div>
+            </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
