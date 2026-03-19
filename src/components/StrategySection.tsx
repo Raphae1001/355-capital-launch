@@ -1,5 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
-import { Shield, Cpu, Rocket, Zap, Crosshair, GitBranch } from "lucide-react";
+import { Shield, Cpu, Rocket, Zap, Crosshair, GitBranch, Repeat } from "lucide-react";
 
 const sectors = [
   { icon: Shield, name: "Defense" },
@@ -13,7 +13,6 @@ const StrategySection = () => (
   <section className="section-padding">
     <div className="max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-2 gap-20">
-        {/* What we invest in */}
         <div>
           <ScrollReveal>
             <p className="text-xs font-mono-data tracking-[0.3em] uppercase text-primary mb-4">Strategy</p>
@@ -22,7 +21,6 @@ const StrategySection = () => (
               Deep-tech sectors where domain expertise creates asymmetric returns.
             </p>
           </ScrollReveal>
-
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-10">
             {sectors.map((s, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
@@ -35,7 +33,6 @@ const StrategySection = () => (
           </div>
         </div>
 
-        {/* How we invest */}
         <div>
           <ScrollReveal delay={0.2}>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mt-8 lg:mt-0">How we invest</h2>
@@ -43,7 +40,6 @@ const StrategySection = () => (
               A hybrid model blending primary and secondary positions for optimal risk-adjusted returns.
             </p>
           </ScrollReveal>
-
           <div className="mt-10 space-y-4">
             <ScrollReveal delay={0.3}>
               <div className="glass rounded-xl p-6 hover-lift">
@@ -73,7 +69,5 @@ const StrategySection = () => (
     </div>
   </section>
 );
-
-import { Repeat } from "lucide-react";
 
 export default StrategySection;
