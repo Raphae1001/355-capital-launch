@@ -78,44 +78,48 @@ export default function TrackRecord() {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                {/* Active Deals Table */}
-               <div>
-                 <div className="bg-primary/20 border-b-2 border-primary py-3 px-4 mb-2 flex justify-between uppercase font-mono-data text-sm text-zinc-100">
-                    <div className="w-1/2">Investment</div>
-                    <div className="w-1/4 text-center">Exit</div>
-                    <div className="w-1/4 text-right">IRR</div>
-                 </div>
-                 <div className="space-y-1">
-                    {activeDeals.map((deal, i) => (
-                      <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
-                         <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
-                            {deal.name}
-                            {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-amber-500 bg-amber-500/10 px-1.5 py-0.5 w-fit rounded">SECONDARY ENTRY</span>}
-                         </div>
-                         <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
-                         <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>
-                      </div>
-                    ))}
+               <div className="w-full overflow-x-auto pb-4">
+                 <div className="min-w-[500px]">
+                   <div className="bg-primary/20 border-b-2 border-primary py-3 px-4 mb-2 flex justify-between uppercase font-mono-data text-sm text-zinc-100">
+                      <div className="w-1/2">Investment</div>
+                      <div className="w-1/4 text-center">Exit</div>
+                      <div className="w-1/4 text-right">IRR</div>
+                   </div>
+                   <div className="space-y-1">
+                      {activeDeals.map((deal, i) => (
+                        <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
+                           <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
+                              {deal.name}
+                              {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-amber-500 bg-amber-500/10 px-1.5 py-0.5 w-fit rounded">SECONDARY ENTRY</span>}
+                           </div>
+                           <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
+                           <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>
+                        </div>
+                      ))}
+                   </div>
                  </div>
                </div>
 
                {/* Historical Exits Table */}
-               <div>
-                 <div className="bg-primary/20 border-b-2 border-primary py-3 px-4 mb-2 flex justify-between uppercase font-mono-data text-sm text-zinc-100">
-                    <div className="w-1/2">Historical Exits</div>
-                    <div className="w-1/4 text-center">Exit</div>
-                    <div className="w-1/4 text-right">IRR</div>
-                 </div>
-                 <div className="space-y-1">
-                    {historicalExits.map((deal, i) => (
-                      <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
-                         <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
-                            {deal.name}
-                            {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-amber-500 bg-amber-500/10 px-1.5 py-0.5 w-fit rounded">SECONDARY EXIT</span>}
-                         </div>
-                         <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
-                         <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>
-                      </div>
-                    ))}
+               <div className="w-full overflow-x-auto pb-4">
+                 <div className="min-w-[500px]">
+                   <div className="bg-primary/20 border-b-2 border-primary py-3 px-4 mb-2 flex justify-between uppercase font-mono-data text-sm text-zinc-100">
+                      <div className="w-1/2">Historical Exits</div>
+                      <div className="w-1/4 text-center">Exit</div>
+                      <div className="w-1/4 text-right">IRR</div>
+                   </div>
+                   <div className="space-y-1">
+                      {historicalExits.map((deal, i) => (
+                        <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
+                           <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
+                              {deal.name}
+                              {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-amber-500 bg-amber-500/10 px-1.5 py-0.5 w-fit rounded">SECONDARY EXIT</span>}
+                           </div>
+                           <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
+                           <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>
+                        </div>
+                      ))}
+                   </div>
                  </div>
                </div>
             </div>
