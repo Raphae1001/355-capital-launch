@@ -18,7 +18,7 @@ const RiskSection = () => (
         </h2>
       </ScrollReveal>
 
-      <div className="grid md:grid-cols-3 gap-6 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
         {strategies.map((s, i) => (
           <ScrollReveal key={i} delay={i * 0.1}>
             <GlassCard className="p-8 h-full">

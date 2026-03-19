@@ -17,7 +17,7 @@ const TrackRecordSection = () => (
         </h2>
       </ScrollReveal>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
         {metrics.map((m, i) => (
           <ScrollReveal key={i} delay={i * 0.1}>
             <div className="glass rounded-xl p-8 hover-lift">

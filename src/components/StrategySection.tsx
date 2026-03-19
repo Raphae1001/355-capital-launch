@@ -22,7 +22,7 @@ const StrategySection = () => (
               Deep-tech sectors where domain expertise creates asymmetric returns.
             </p>
           </ScrollReveal>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
             {sectors.map((s, i) => (
               <ScrollReveal key={i} delay={i * 0.05}>
                 <GlassCard breathe className="p-5 flex flex-col items-center gap-3">

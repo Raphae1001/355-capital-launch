@@ -124,7 +124,7 @@ export default function Strategy() {
           <section className="max-w-7xl mx-auto px-6 mb-24">
             <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">04. The Fund Parameters</h2>
             
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
               {[
                 { label: "TYPE", value: "Early-Stage VC Fund" },
                 { label: "TARGET SIZE", value: "US$ 50M", sub: "Soft Cap: US$ 30M" },
