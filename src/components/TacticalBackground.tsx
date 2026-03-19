@@ -11,8 +11,11 @@ const TacticalBackground = () => {
 
     let animationId: number;
     let dots: { x: number; y: number; vx: number; vy: number }[] = [];
-    const DOT_COUNT = 150;
-    const CONNECTION_DIST = 160;
+    
+    // Performance optimization for mobile
+    const isMobile = window.innerWidth < 768;
+    const DOT_COUNT = isMobile ? 50 : 150;
+    const CONNECTION_DIST = isMobile ? 100 : 160;
     const RADAR_INTERVAL = 12000;
     const RADAR_DURATION = 4000;
     const RADAR_X_RATIO = 0.15;

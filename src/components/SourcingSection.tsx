@@ -21,7 +21,7 @@ const SourcingSection = () => (
         </p>
       </ScrollReveal>
 
-      <div className="grid md:grid-cols-3 gap-6 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
         {items.map((item, i) => (
           <ScrollReveal key={i} delay={i * 0.1}>
             <GlassCard className="p-8 group">

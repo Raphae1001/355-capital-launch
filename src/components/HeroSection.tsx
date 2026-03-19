@@ -111,36 +111,36 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="flex flex-wrap gap-4 mt-10"
+          className="flex flex-col sm:flex-row flex-wrap gap-4 mt-10"
         >
           <Link
             to="/strategy"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md bg-primary text-primary-foreground font-semibold text-sm hover:brightness-110 transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 px-7 min-h-[56px] rounded-md bg-primary text-primary-foreground font-semibold text-base sm:text-sm hover:brightness-110 transition-all duration-200 w-full sm:w-auto"
           >
             Submit a company <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             to="/login"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-md border border-border text-foreground font-medium text-sm hover:bg-secondary transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 px-7 min-h-[56px] rounded-md border border-border text-foreground font-medium text-base sm:text-sm hover:bg-secondary transition-all duration-200 w-full sm:w-auto"
           >
             <Lock className="w-4 h-4" /> Investor access
           </Link>
         </motion.div>
 
         {/* Stats — staggered */}
-        <div className="grid grid-cols-3 gap-4 mt-20 max-w-xl">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-16 sm:mt-20 max-w-xl">
           {stats.map((stat, i) => (
             <motion.div
               key={stat.label}
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.6, delay: 1.0 + i * 0.15, ease: "easeOut" }}
-              className="glass rounded-lg p-6 text-center hover-lift"
+              className="glass rounded-lg p-6 sm:p-5 text-center hover-lift flex flex-col items-center justify-center"
             >
-              <div className="font-mono-data text-3xl md:text-4xl font-bold text-primary">
+              <div className="font-mono-data text-4xl sm:text-3xl md:text-4xl font-bold text-primary">
                 {stat.value}
               </div>
-              <div className="text-xs text-muted-foreground mt-2 uppercase tracking-widest">
+              <div className="text-[11px] sm:text-xs text-muted-foreground mt-2 uppercase tracking-widest">
                 {stat.label}
               </div>
             </motion.div>

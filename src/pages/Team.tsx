@@ -37,7 +37,7 @@ export default function Team() {
                   <img 
                     src="/florian.jpg" 
                     alt="Florian Seroussi" 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl">
                     <h2 className="text-2xl font-bold text-zinc-100">Florian Seroussi</h2>
@@ -98,7 +98,7 @@ export default function Team() {
                   <img 
                     src="/bernard.png" 
                     alt="Bernard Kalfon" 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl">
                     <h2 className="text-2xl font-bold text-zinc-100">Bernard Kalfon</h2>

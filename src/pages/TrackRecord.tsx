@@ -48,7 +48,7 @@ export default function TrackRecord() {
               Proven Performance
             </h1>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
               <div className="border border-zinc-800/60 bg-zinc-900/30 p-6 rounded-xl">
                 <Target className="w-6 h-6 text-primary mb-4" />
                 <CountUpNumber end={65} suffix="+" duration={2.5} className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2" />
