@@ -56,7 +56,7 @@ const StrategySection = () => (
             <ScrollReveal delay={0.4}>
               <GlassCard className="p-6">
                 <div className="flex items-center gap-4 mb-3">
-                  <Repeat className="w-5 h-5 text-primary" />
+                  <Repeat className="w-5 h-5 text-amber-500" />
                   <h3 className="font-bold text-lg">Opportunistic Secondary</h3>
                 </div>
                 <p className="text-muted-foreground text-sm leading-relaxed">

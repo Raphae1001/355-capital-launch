@@ -44,7 +44,12 @@ const HeroSection = () => {
     >
       {/* Subtle grid background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border)/0.3)_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border)/0.3)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+      
+      {/* Spinning Radar Sweep */}
+      <div className="absolute top-1/2 left-1/2 w-[1600px] h-[1600px] -translate-x-1/2 -translate-y-1/2 rounded-full animate-scan-radar pointer-events-none opacity-60 mix-blend-screen"
+           style={{ background: 'conic-gradient(from 0deg, transparent 70%, rgba(14, 165, 233, 0.2) 90%, rgba(14, 165, 233, 0.8) 100%)' }} />
+
+      <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/50 to-background" />
 
       {/* Mouse spotlight */}
       {isHovering && (
@@ -55,13 +60,13 @@ const HeroSection = () => {
             top: mousePos.y - 200,
             width: 400,
             height: 400,
-            background: "radial-gradient(circle, hsl(160 70% 45% / 0.06) 0%, transparent 70%)",
+            background: "radial-gradient(circle, hsl(199 89% 48% / 0.15) 0%, transparent 70%)",
           }}
         />
       )}
 
       {/* Accent glow */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-primary/5 rounded-full blur-[120px] animate-pulse-glow" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-primary/20 rounded-full blur-[140px] animate-pulse-glow pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto w-full z-[2]">
         {/* Verticals */}
