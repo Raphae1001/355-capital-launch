@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import GlassCard from "./GlassCard";
 import { Radar, Users, Globe } from "lucide-react";
 
 const items = [
@@ -23,10 +24,10 @@ const SourcingSection = () => (
       <div className="grid md:grid-cols-3 gap-6 mt-16">
         {items.map((item, i) => (
           <ScrollReveal key={i} delay={i * 0.1}>
-            <div className="glass rounded-xl p-8 hover-lift group">
+            <GlassCard className="p-8 group">
               <item.icon className="w-8 h-8 text-primary mb-6 group-hover:scale-110 transition-transform" />
               <p className="text-foreground font-medium text-lg">{item.text}</p>
-            </div>
+            </GlassCard>
           </ScrollReveal>
         ))}
       </div>

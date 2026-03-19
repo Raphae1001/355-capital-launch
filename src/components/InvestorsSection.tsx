@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import GlassCard from "./GlassCard";
 import { Eye, BarChart3, Handshake } from "lucide-react";
 
 const benefits = [
@@ -18,11 +19,11 @@ const InvestorsSection = () => (
       <div className="grid md:grid-cols-3 gap-6 mt-16">
         {benefits.map((b, i) => (
           <ScrollReveal key={i} delay={i * 0.1}>
-            <div className="glass rounded-xl p-8 hover-lift h-full">
+            <GlassCard className="p-8 h-full">
               <b.icon className="w-8 h-8 text-primary mb-6" />
               <h3 className="text-xl font-bold mb-3">{b.title}</h3>
               <p className="text-muted-foreground leading-relaxed">{b.desc}</p>
-            </div>
+            </GlassCard>
           </ScrollReveal>
         ))}
       </div>
