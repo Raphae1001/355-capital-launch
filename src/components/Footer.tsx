@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { siteNavLinks } from "@/lib/navigation";
 
 const Footer = () => (
   <footer className="border-t border-border py-16 px-6 md:px-12">
@@ -17,10 +18,11 @@ const Footer = () => (
         <div>
           <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Navigation</p>
           <div className="flex flex-col gap-2">
-            <Link to="/strategy" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Strategy</Link>
-            <Link to="/track-record" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Track Record</Link>
-            <Link to="/team" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Team</Link>
-            <Link to="/insights" className="text-sm text-foreground/70 hover:text-foreground transition-colors">Insights</Link>
+            {siteNavLinks.map((link) => (
+              <Link key={link.href} to={link.href} className="text-sm text-foreground/70 hover:text-foreground transition-colors">
+                {link.label}
+              </Link>
+            ))}
             <Link to="/login" className="text-sm text-foreground/70 hover:text-foreground transition-colors mt-2">Investor Login</Link>
           </div>
         </div>

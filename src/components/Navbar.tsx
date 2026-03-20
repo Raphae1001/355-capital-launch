@@ -2,13 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
-
-const navLinks = [
-  { label: "Strategy", href: "/strategy" },
-  { label: "Track Record", href: "/track-record" },
-  { label: "Insights", href: "/insights" },
-  { label: "Team", href: "/team" },
-];
+import { siteNavLinks } from "@/lib/navigation";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -44,22 +38,22 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${
-        scrolled ? "glass shadow-lg shadow-background/50" : "bg-transparent"
+        isMobileMenuOpen ? "bg-black" : scrolled ? "glass shadow-lg shadow-background/50" : "bg-transparent"
       }`}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 md:px-12 h-16 md:h-20">
         <Link to="/" className="flex items-center gap-2 relative z-[101]">
-          <span className="text-xl md:text-2xl font-bold tracking-tight text-foreground whitespace-nowrap">
+          <span className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight text-foreground whitespace-nowrap">
             355<span className="text-primary">.</span>
           </span>
-          <span className="text-xs font-medium tracking-[0.3em] uppercase text-muted-foreground whitespace-nowrap mt-1">
-            Capital
+          <span className="text-[11px] sm:text-xs font-medium tracking-[0.3em] uppercase text-muted-foreground whitespace-nowrap mt-0.5">
+            CAPITAL
           </span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
+          {siteNavLinks.map((link) => (
             <Link
               key={link.label}
               to={link.href}
@@ -95,10 +89,10 @@ const Navbar = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 z-[100] bg-zinc-950 lg:hidden flex flex-col pt-24 px-6 pb-6"
+            className="fixed inset-0 z-[100] bg-black lg:hidden flex flex-col pt-24 px-6 pb-6"
           >
             <div className="flex flex-col gap-6 flex-1">
-              {navLinks.map((link) => (
+              {siteNavLinks.map((link) => (
                 <Link
                   key={link.label}
                   to={link.href}

@@ -2,9 +2,9 @@ import { PageTransition } from "@/components/PageTransition";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Briefcase, GraduationCap, Building2, TrendingUp, Users } from "lucide-react";
+import { ArrowLeft, GraduationCap, Building2, TrendingUp, Users } from "lucide-react";
 
-export default function Team() {
+export default function People() {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
@@ -18,12 +18,12 @@ export default function Team() {
           </div>
 
           <section className="max-w-7xl mx-auto px-6 mb-24">
-            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/The_Team_03</p>
+            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/People_04</p>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
-              The Management
+              People
             </h1>
             <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-              Decades of combined experience traversing early-stage venture capital and global institutional finance.
+              The partners behind 355 Capital, with decades of combined experience across early-stage venture capital and global institutional finance.
             </p>
           </section>
 

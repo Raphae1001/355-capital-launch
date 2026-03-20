@@ -2,7 +2,7 @@ import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import SourcingSection from "../components/SourcingSection";
 import RiskSection from "../components/RiskSection";
-import StrategySection from "../components/StrategySection";
+import InvestmentProcessSection from "../components/InvestmentProcessSection";
 import TrackRecordSection from "../components/TrackRecordSection";
 import InvestorsSection from "../components/InvestorsSection";
 import Footer from "../components/Footer";
@@ -16,7 +16,7 @@ const Index = () => (
       <HeroSection />
       <SourcingSection />
       <RiskSection />
-      <StrategySection />
+      <InvestmentProcessSection />
       <TrackRecordSection />
       <InvestorsSection />
       <Footer />
