@@ -10,13 +10,13 @@ const sectors = [
   { icon: Zap, name: "Energy" },
 ];
 
-const StrategySection = () => (
+const InvestmentProcessSection = () => (
   <section className="section-padding">
     <div className="max-w-7xl mx-auto">
       <div className="grid lg:grid-cols-2 gap-20">
         <div>
           <ScrollReveal>
-            <p className="text-xs font-mono-data tracking-[0.3em] uppercase text-primary mb-4">Strategy</p>
+            <p className="text-xs font-mono-data tracking-[0.3em] uppercase text-primary mb-4">Investment Process</p>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight">What we invest in</h2>
             <p className="text-muted-foreground mt-4 leading-relaxed">
               Deep-tech sectors where domain expertise creates asymmetric returns.
@@ -71,4 +71,4 @@ const StrategySection = () => (
   </section>
 );
 
-export default StrategySection;
+export default InvestmentProcessSection;

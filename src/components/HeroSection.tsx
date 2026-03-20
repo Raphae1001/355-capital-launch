@@ -114,10 +114,10 @@ const HeroSection = () => {
           className="flex flex-col sm:flex-row flex-wrap gap-4 mt-10"
         >
           <Link
-            to="/strategy"
+            to="/investment-process"
             className="inline-flex items-center justify-center gap-2 px-7 min-h-[56px] rounded-md bg-primary text-primary-foreground font-semibold text-base sm:text-sm hover:brightness-110 transition-all duration-200 w-full sm:w-auto"
           >
-            Submit a company <ArrowRight className="w-4 h-4" />
+            View investment process <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             to="/login"

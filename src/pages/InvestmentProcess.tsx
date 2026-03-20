@@ -23,7 +23,7 @@ const focusAreas = [
   { icon: ArrowRightLeft, title: "Secondary Market", desc: "Opportunistic liquidity in proven winners." },
 ];
 
-export default function Strategy() {
+export default function InvestmentProcess() {
   return (
     <PageTransition>
       <div className="min-h-screen bg-background text-foreground selection:bg-primary/30">
@@ -39,12 +39,12 @@ export default function Strategy() {
 
           {/* Hero */}
           <section className="max-w-7xl mx-auto px-6 mb-24">
-            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Strategy_01</p>
+            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Investment_Process_01</p>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
-              The Hybrid Thesis
+              Investment Process
             </h1>
             <p className="text-xl text-zinc-400 max-w-3xl leading-relaxed">
-              A differentiated approach combining <span className="text-zinc-100 font-semibold">Primary conviction</span> and <span className="text-zinc-100 font-semibold">Secondary liquidity</span>.
+              A differentiated hybrid thesis combining <span className="text-zinc-100 font-semibold">primary conviction</span> and <span className="text-zinc-100 font-semibold">secondary liquidity</span>.
             </p>
           </section>
 
