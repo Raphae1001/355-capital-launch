@@ -19,7 +19,7 @@ const Footer = () => (
           <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Navigation</p>
           <div className="flex flex-col gap-2">
             {siteNavLinks.map((link) => (
-              <Link key={link.href} to={link.href} className="text-sm text-foreground/70 hover:text-foreground transition-colors">
+              <Link key={link.href} to={link.href} className="text-sm leading-tight whitespace-pre-line text-foreground/70 hover:text-foreground transition-colors">
                 {link.label}
               </Link>
             ))}

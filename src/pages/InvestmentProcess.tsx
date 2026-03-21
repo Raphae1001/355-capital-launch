@@ -1,8 +1,7 @@
 import { PageTransition } from "@/components/PageTransition";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Lock, Cpu, Battery, Rocket, ArrowRightLeft, Users, Target, Globe, Award, CheckCircle2 } from "lucide-react";
+import { Shield, Lock, Cpu, Battery, Rocket, ArrowRightLeft, Users, Target, Globe, Award, CheckCircle2 } from "lucide-react";
 import GlassCard from "@/components/GlassCard";
 
 const fundStrengths = [
@@ -30,20 +29,13 @@ export default function InvestmentProcess() {
         <Navbar />
         
         <main className="pt-32 pb-24">
-          {/* Back button */}
-          <div className="max-w-7xl mx-auto px-6 mb-12">
-            <Link to="/" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors">
-              <ArrowLeft className="w-4 h-4" /> Back to Command Center
-            </Link>
-          </div>
-
           {/* Hero */}
           <section className="max-w-7xl mx-auto px-6 mb-24">
             <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Investment_Process</p>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
               Investment Process
             </h1>
-            <p className="text-xl text-zinc-400 max-w-3xl leading-relaxed">
+            <p className="text-xl text-zinc-400 leading-relaxed lg:max-w-none lg:whitespace-nowrap">
               A differentiated hybrid thesis combining <span className="text-zinc-100 font-semibold">primary conviction</span> and <span className="text-zinc-100 font-semibold">secondary liquidity</span>.
             </p>
           </section>
@@ -84,19 +76,19 @@ export default function InvestmentProcess() {
               </div>
               
               <div className="bg-zinc-900/40 border border-zinc-800 p-10 rounded-xl relative overflow-hidden focus-ring">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/10 blur-[50px] pointer-events-none" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-zinc-100/10 blur-[50px] pointer-events-none" />
                 <h3 className="text-2xl font-bold text-zinc-100 mb-4 flex flex-col items-start gap-2">
                   Secondary
-                  <span className="text-amber-500 font-mono-data text-xs px-3 py-1 bg-amber-500/10 rounded-full">OPPORTUNISTIC</span>
+                  <span className="text-zinc-200 font-mono-data text-xs px-3 py-1 bg-zinc-100/10 border border-zinc-200/15 rounded-full">OPPORTUNISTIC</span>
                 </h3>
                 <p className="text-zinc-400 leading-relaxed mb-6">
-                  Selective entry into proven winners at attractive valuations. Our <strong className="text-amber-500">Capital Recycling</strong> approach de-risks our exposure and secures early liquidity for optimal IRR.
+                  Selective entry into proven winners at attractive valuations. Our <strong className="text-zinc-200">Capital Recycling</strong> approach de-risks our exposure and secures early liquidity for optimal IRR.
                 </p>
                 <ul className="space-y-3 text-sm text-zinc-300">
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Active risk management</li>
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Partial exits starting at Series A / B</li>
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Greater portfolio liquidity</li>
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Enhanced long-term performance</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-zinc-300" /> Active risk management</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-zinc-300" /> Partial exits starting at Series A / B</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-zinc-300" /> Greater portfolio liquidity</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-zinc-300" /> Enhanced long-term performance</li>
                 </ul>
               </div>
             </div>

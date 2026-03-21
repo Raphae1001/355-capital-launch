@@ -1,10 +1,8 @@
 import { PageTransition } from "@/components/PageTransition";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
 import {
   Activity,
-  ArrowLeft,
   DoorOpen,
   Droplets,
   Gauge,
@@ -88,12 +86,6 @@ export default function RiskManagement() {
         <Navbar />
 
         <main className="pt-32 pb-24">
-          <div className="max-w-7xl mx-auto px-6 mb-12">
-            <Link to="/" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors">
-              <ArrowLeft className="w-4 h-4" /> Back to Command Center
-            </Link>
-          </div>
-
           <section className="max-w-7xl mx-auto px-6 mb-24">
             <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Risk_Management_02</p>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">

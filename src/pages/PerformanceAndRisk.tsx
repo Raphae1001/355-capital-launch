@@ -1,10 +1,8 @@
 import { PageTransition } from "@/components/PageTransition";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
 import {
   Activity,
-  ArrowLeft,
   CheckCircle2,
   Clock,
   DoorOpen,
@@ -115,12 +113,6 @@ export default function PerformanceAndRisk() {
         <Navbar />
 
         <main className="pt-32 pb-24">
-          <div className="max-w-7xl mx-auto px-6 mb-12">
-            <Link to="/" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors">
-              <ArrowLeft className="w-4 h-4" /> Back to Command Center
-            </Link>
-          </div>
-
           <section className="max-w-7xl mx-auto px-6 mb-24">
             <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Performance_And_Risk</p>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
@@ -155,7 +147,7 @@ export default function PerformanceAndRisk() {
           </section>
 
           <section className="max-w-7xl mx-auto px-6 mb-32">
-            <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">01. Selected Investments</h2>
+            <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">Selected Investments</h2>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="w-full overflow-x-auto pb-4">
@@ -170,7 +162,7 @@ export default function PerformanceAndRisk() {
                       <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
                         <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
                           {deal.name}
-                          {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-amber-500 bg-amber-500/10 px-1.5 py-0.5 w-fit rounded">SECONDARY ENTRY</span>}
+                          {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-zinc-200 bg-zinc-100/10 border border-zinc-200/15 px-1.5 py-0.5 w-fit rounded">SECONDARY ENTRY</span>}
                         </div>
                         <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
                         <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>
@@ -192,7 +184,7 @@ export default function PerformanceAndRisk() {
                       <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
                         <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
                           {deal.name}
-                          {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-amber-500 bg-amber-500/10 px-1.5 py-0.5 w-fit rounded">SECONDARY EXIT</span>}
+                          {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-zinc-200 bg-zinc-100/10 border border-zinc-200/15 px-1.5 py-0.5 w-fit rounded">SECONDARY EXIT</span>}
                         </div>
                         <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
                         <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>
@@ -204,8 +196,45 @@ export default function PerformanceAndRisk() {
             </div>
           </section>
 
+          <section className="max-w-7xl mx-auto px-6 mb-16">
+            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Risk_Management</p>
+            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
+              RISK MANAGEMENT
+            </h2>
+            <p className="text-xl text-zinc-400 max-w-3xl leading-relaxed">
+              A disciplined framework built to underwrite downside, preserve optionality, and maintain control from underwriting through liquidity.
+            </p>
+          </section>
+
           <section className="max-w-7xl mx-auto px-6 mb-24">
-            <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">02. Methodology of Derisking</h2>
+            <h3 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">Framework Pillars</h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+              {riskPillars.map((pillar) => (
+                <article
+                  key={pillar.title}
+                  className="group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-900/40 p-8 hover:border-primary/30 hover:bg-zinc-900/60 transition-colors"
+                >
+                  <div className="absolute top-0 right-0 w-28 h-28 bg-primary/5 blur-[50px] pointer-events-none" />
+
+                  <div className="relative">
+                    <div className="flex items-start justify-between gap-4 mb-8">
+                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center border border-primary/20">
+                        <pillar.icon className="w-6 h-6 text-primary" />
+                      </div>
+                      <span className="font-mono-data text-xs text-zinc-600">{pillar.id}</span>
+                    </div>
+
+                    <h4 className="text-xl font-bold text-zinc-100 mb-4">{pillar.title}</h4>
+                    <p className="text-sm text-zinc-400 leading-relaxed">{pillar.description}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </section>
+
+          <section className="max-w-7xl mx-auto px-6 mb-24">
+            <h3 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">Methodology of Derisking</h3>
 
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 md:p-12 relative overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.05),transparent_50%)] pointer-events-none" />
@@ -215,7 +244,7 @@ export default function PerformanceAndRisk() {
                   <Target className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-zinc-100">Gorgias</h3>
+                  <h4 className="text-2xl font-bold text-zinc-100">Gorgias</h4>
                   <p className="text-zinc-500 font-mono-data text-sm">CASE STUDY</p>
                 </div>
               </div>
@@ -257,43 +286,6 @@ export default function PerformanceAndRisk() {
                   </div>
                 </div>
               </div>
-            </div>
-          </section>
-
-          <section className="max-w-7xl mx-auto px-6 mb-16">
-            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Risk_Management</p>
-            <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
-              RISK MANAGEMENT
-            </h2>
-            <p className="text-xl text-zinc-400 max-w-3xl leading-relaxed">
-              A disciplined framework built to underwrite downside, preserve optionality, and maintain control from underwriting through liquidity.
-            </p>
-          </section>
-
-          <section className="max-w-7xl mx-auto px-6 mb-24">
-            <h3 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">03. Framework Pillars</h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {riskPillars.map((pillar) => (
-                <article
-                  key={pillar.title}
-                  className="group relative overflow-hidden rounded-xl border border-zinc-800/60 bg-zinc-900/40 p-8 hover:border-primary/30 hover:bg-zinc-900/60 transition-colors"
-                >
-                  <div className="absolute top-0 right-0 w-28 h-28 bg-primary/5 blur-[50px] pointer-events-none" />
-
-                  <div className="relative">
-                    <div className="flex items-start justify-between gap-4 mb-8">
-                      <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center border border-primary/20">
-                        <pillar.icon className="w-6 h-6 text-primary" />
-                      </div>
-                      <span className="font-mono-data text-xs text-zinc-600">{pillar.id}</span>
-                    </div>
-
-                    <h4 className="text-xl font-bold text-zinc-100 mb-4">{pillar.title}</h4>
-                    <p className="text-sm text-zinc-400 leading-relaxed">{pillar.description}</p>
-                  </div>
-                </article>
-              ))}
             </div>
           </section>
         </main>
