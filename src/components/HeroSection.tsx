@@ -9,7 +9,7 @@ const stats = [
   { value: "26", label: "Exits" },
 ];
 
-const verticals = ["Defense", "Cyber security", "AI & Robotics", "Energy", "Aerospace", "Secondary Market"];
+const verticals = ["Defense", "Cyber security", "AI & Robotics", "Energy", "Aerospace"];
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
