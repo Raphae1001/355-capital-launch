@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { ArrowRight, Lock } from "lucide-react";
+import { ArrowRight, ArrowUp, Lock } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
@@ -9,7 +9,7 @@ const stats = [
   { value: "26", label: "Exits" },
 ];
 
-const verticals = ["Defense", "Cybersecurity", "AI", "Space"];
+const verticals = ["Defense", "Cyber security", "AI & Robotics", "Energy", "Aerospace", "Secondary Market"];
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -74,7 +74,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex items-center gap-3 mb-8"
+          className="flex flex-wrap items-center gap-3 mb-8 max-w-4xl"
         >
           {verticals.map((v, i) => (
             <span key={v} className="flex items-center gap-3 text-xs font-mono-data tracking-widest uppercase text-primary/80">
@@ -147,6 +147,18 @@ const HeroSection = () => {
           ))}
         </div>
       </div>
+
+      <motion.button
+        type="button"
+        aria-label="Scroll to top"
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, delay: 1.2 }}
+        onClick={() => window.scrollTo({ top: 0, left: 0, behavior: "smooth" })}
+        className="absolute bottom-8 left-1/2 z-[3] -translate-x-1/2 rounded-full border border-white/10 bg-zinc-950/80 p-3 text-primary shadow-lg shadow-black/30 backdrop-blur"
+      >
+        <ArrowUp className="w-5 h-5" />
+      </motion.button>
     </section>
   );
 };

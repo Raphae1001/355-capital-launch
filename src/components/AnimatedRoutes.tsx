@@ -3,10 +3,9 @@ import { AnimatePresence } from "framer-motion";
 import Index from "@/pages/Index.tsx";
 import Login from "@/pages/Login.tsx";
 import InvestmentProcess from "@/pages/InvestmentProcess.tsx";
-import TrackRecord from "@/pages/TrackRecord.tsx";
+import PerformanceAndRisk from "@/pages/PerformanceAndRisk.tsx";
 import People from "@/pages/People.tsx";
 import Insights from "@/pages/Insights.tsx";
-import RiskManagement from "@/pages/RiskManagement.tsx";
 import NotFound from "@/pages/NotFound.tsx";
 
 const AnimatedRoutes = () => {
@@ -19,8 +18,7 @@ const AnimatedRoutes = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/investment-process" element={<InvestmentProcess />} />
         <Route path="/strategy" element={<Navigate to="/investment-process" replace />} />
-        <Route path="/risk-management" element={<RiskManagement />} />
-        <Route path="/track-record" element={<TrackRecord />} />
+        <Route path="/performance-and-risk" element={<PerformanceAndRisk />} />
         <Route path="/people" element={<People />} />
         <Route path="/team" element={<Navigate to="/people" replace />} />
         <Route path="/insights" element={<Insights />} />

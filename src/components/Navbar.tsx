@@ -90,6 +90,7 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="fixed inset-0 z-[100] bg-black lg:hidden flex flex-col pt-24 px-6 pb-6"
+            style={{ backgroundColor: "#000000" }}
           >
             <div className="flex flex-col gap-6 flex-1">
               {siteNavLinks.map((link) => (
