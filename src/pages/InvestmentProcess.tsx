@@ -2,7 +2,7 @@ import { PageTransition } from "@/components/PageTransition";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Shield, Lock, Cpu, Rocket, Battery, ArrowRightLeft, Users, Zap, Search, Target, Globe, Award, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, Shield, Lock, Cpu, Battery, Rocket, ArrowRightLeft, Users, Target, Globe, Award, CheckCircle2 } from "lucide-react";
 import GlassCard from "@/components/GlassCard";
 
 const fundStrengths = [
@@ -76,9 +76,10 @@ export default function InvestmentProcess() {
                   Focus on being the <strong className="text-primary">"First Check"</strong>. We take high-conviction bets targeting visionary founders obsessed with solving hard problems at scale.
                 </p>
                 <ul className="space-y-3 text-sm text-zinc-300">
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary" /> Unanimous voting of investment committee</li>
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary" /> Potential: $1 Billion Valuation</li>
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary" /> Strong founders & execution team</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary" /> Unanimous voting of the investment committee</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary" /> Potential: $1B+ valuation</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary" /> Strong founders & execution teams</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-primary" /> Co-invest alongside top-tier venture capital firms</li>
                 </ul>
               </div>
               
@@ -93,8 +94,9 @@ export default function InvestmentProcess() {
                 </p>
                 <ul className="space-y-3 text-sm text-zinc-300">
                   <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Active risk management</li>
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Partial exits starting at Series A/B</li>
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Accelerated capital returns</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Partial exits starting at Series A / B</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Greater portfolio liquidity</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-amber-500" /> Enhanced long-term performance</li>
                 </ul>
               </div>
             </div>

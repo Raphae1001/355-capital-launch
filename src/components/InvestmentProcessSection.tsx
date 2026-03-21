@@ -1,13 +1,14 @@
 import ScrollReveal from "./ScrollReveal";
 import GlassCard from "./GlassCard";
-import { Shield, Cpu, Rocket, Zap, Crosshair, GitBranch, Repeat } from "lucide-react";
+import { Shield, Lock, Cpu, Battery, Rocket, ArrowRightLeft, GitBranch, Repeat } from "lucide-react";
 
 const sectors = [
   { icon: Shield, name: "Defense" },
-  { icon: Crosshair, name: "Cybersecurity" },
-  { icon: Cpu, name: "AI" },
-  { icon: Rocket, name: "Space" },
-  { icon: Zap, name: "Energy" },
+  { icon: Lock, name: "Cyber security" },
+  { icon: Cpu, name: "AI & Robotics" },
+  { icon: Battery, name: "Energy" },
+  { icon: Rocket, name: "Aerospace" },
+  { icon: ArrowRightLeft, name: "Secondary Market" },
 ];
 
 const InvestmentProcessSection = () => (
@@ -48,9 +49,12 @@ const InvestmentProcessSection = () => (
                   <GitBranch className="w-5 h-5 text-primary" />
                   <h3 className="font-bold text-lg">Primary: Pre-seed & Series A</h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  Early conviction bets with hands-on support to accelerate growth.
-                </p>
+                <ul className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-primary" /> Unanimous voting of the investment committee</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-primary" /> Potential: $1B+ valuation</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-primary" /> Strong founders & execution teams</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-primary" /> Co-invest alongside top-tier venture capital firms</li>
+                </ul>
               </GlassCard>
             </ScrollReveal>
             <ScrollReveal delay={0.4}>
@@ -59,9 +63,12 @@ const InvestmentProcessSection = () => (
                   <Repeat className="w-5 h-5 text-amber-500" />
                   <h3 className="font-bold text-lg">Opportunistic Secondary</h3>
                 </div>
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  De-risked entry into proven winners at attractive valuations.
-                </p>
+                <ul className="space-y-3 text-sm text-muted-foreground leading-relaxed">
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-amber-500" /> Active risk management</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-amber-500" /> Partial exits starting at Series A / B</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-amber-500" /> Greater portfolio liquidity</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-amber-500" /> Enhanced long-term performance</li>
+                </ul>
               </GlassCard>
             </ScrollReveal>
           </div>

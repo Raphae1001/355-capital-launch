@@ -1,10 +1,10 @@
 import ScrollReveal from "./ScrollReveal";
 import GlassCard from "./GlassCard";
-import { ShieldCheck, TrendingDown, Repeat } from "lucide-react";
+import { ShieldCheck, TrendingUp, Repeat } from "lucide-react";
 
 const strategies = [
   { icon: ShieldCheck, title: "Controlled allocation", desc: "3–7% per position, disciplined from day one." },
-  { icon: TrendingDown, title: "Early partial exits", desc: "De-risk at inflection points to lock in gains." },
+  { icon: TrendingUp, title: "Early partial exits", desc: "De-risk at inflection points to lock in gains." },
   { icon: Repeat, title: "Secondary-driven liquidity", desc: "Generate returns without waiting for IPO." },
 ];
 
