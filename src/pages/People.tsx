@@ -18,7 +18,7 @@ export default function People() {
           </div>
 
           <section className="max-w-7xl mx-auto px-6 mb-24">
-            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/People_04</p>
+            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/People</p>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
               People
             </h1>
