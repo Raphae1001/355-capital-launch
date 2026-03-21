@@ -122,7 +122,7 @@ export default function PerformanceAndRisk() {
           </div>
 
           <section className="max-w-7xl mx-auto px-6 mb-24">
-            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Performance_And_Risk_02</p>
+            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Performance_And_Risk</p>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
               TRACK RECORD
             </h1>
