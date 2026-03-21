@@ -5,7 +5,7 @@ import { Radar, Users, Globe } from "lucide-react";
 const items = [
   { icon: Radar, text: "15+ deals reviewed per week" },
   { icon: Users, text: "Strong co-investor network" },
-  { icon: Globe, text: "US / Israel / Europe ecosystems" },
+  { icon: Globe, text: "US / Israel / R.O.W. ecosystems" },
 ];
 
 const SourcingSection = () => (
@@ -17,7 +17,7 @@ const SourcingSection = () => (
           Access drives performance
         </h2>
         <p className="text-lg text-muted-foreground mt-6 max-w-lg">
-          We see what others don't. Our proprietary sourcing engine surfaces exceptional opportunities before the market.
+          We see what others don't. Our unique sourcing engine surfaces exceptional opportunities before the market.
         </p>
       </ScrollReveal>
 
