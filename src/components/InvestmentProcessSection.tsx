@@ -60,14 +60,14 @@ const InvestmentProcessSection = () => (
             <ScrollReveal delay={0.4}>
               <GlassCard className="p-6">
                 <div className="flex items-center gap-4 mb-3">
-                  <Repeat className="w-5 h-5 text-amber-500" />
+                  <Repeat className="w-5 h-5 text-zinc-300" />
                   <h3 className="font-bold text-lg">Opportunistic Secondary</h3>
                 </div>
                 <ul className="space-y-3 text-sm text-muted-foreground leading-relaxed">
-                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-amber-500" /> Active risk management</li>
-                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-amber-500" /> Partial exits starting at Series A / B</li>
-                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-amber-500" /> Greater portfolio liquidity</li>
-                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-amber-500" /> Enhanced long-term performance</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-zinc-300" /> Active risk management</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-zinc-300" /> Partial exits starting at Series A / B</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-zinc-300" /> Greater portfolio liquidity</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-zinc-300" /> Enhanced long-term performance</li>
                 </ul>
               </GlassCard>
             </ScrollReveal>

@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { ReactNode } from "react";
 
 const pageVariants = {
-  initial: { opacity: 0, y: 10, filter: "blur(4px)" },
-  in: { opacity: 1, y: 0, filter: "blur(0px)" },
-  out: { opacity: 0, y: -10, filter: "blur(4px)" }
+  initial: { opacity: 0 },
+  in: { opacity: 1 },
+  out: { opacity: 0 }
 };
 
 const pageTransition = {

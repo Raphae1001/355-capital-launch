@@ -1,8 +1,7 @@
 import { PageTransition } from "@/components/PageTransition";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
-import { ArrowLeft, Target, Trophy, Clock, CheckCircle2 } from "lucide-react";
+import { Target, Trophy, Clock, CheckCircle2 } from "lucide-react";
 import GlassCard from "@/components/GlassCard";
 import { CountUpNumber } from "@/components/CountUpNumber";
 
@@ -35,12 +34,6 @@ export default function TrackRecord() {
         <Navbar />
         
         <main className="pt-32 pb-24">
-          <div className="max-w-7xl mx-auto px-6 mb-12">
-            <Link to="/" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors">
-              <ArrowLeft className="w-4 h-4" /> Back to Command Center
-            </Link>
-          </div>
-
           {/* Hero */}
           <section className="max-w-7xl mx-auto px-6 mb-24">
             <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Track_Record_02</p>
@@ -90,7 +83,7 @@ export default function TrackRecord() {
                         <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
                            <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
                               {deal.name}
-                              {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-amber-500 bg-amber-500/10 px-1.5 py-0.5 w-fit rounded">SECONDARY ENTRY</span>}
+                              {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-zinc-200 bg-zinc-100/10 border border-zinc-200/15 px-1.5 py-0.5 w-fit rounded">SECONDARY ENTRY</span>}
                            </div>
                            <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
                            <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>
@@ -113,7 +106,7 @@ export default function TrackRecord() {
                         <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
                            <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
                               {deal.name}
-                              {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-amber-500 bg-amber-500/10 px-1.5 py-0.5 w-fit rounded">SECONDARY EXIT</span>}
+                              {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-zinc-200 bg-zinc-100/10 border border-zinc-200/15 px-1.5 py-0.5 w-fit rounded">SECONDARY EXIT</span>}
                            </div>
                            <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
                            <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>

@@ -1,8 +1,7 @@
 import { PageTransition } from "@/components/PageTransition";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
-import { ArrowLeft, Terminal, CodeSquare, Activity, FileText } from "lucide-react";
+import { Terminal, CodeSquare, Activity, FileText } from "lucide-react";
 
 const memos = [
   {
@@ -38,12 +37,6 @@ export default function Insights() {
         <Navbar />
         
         <main className="pt-32 pb-24">
-          <div className="max-w-7xl mx-auto px-6 mb-12">
-            <Link to="/" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-100 transition-colors">
-              <ArrowLeft className="w-4 h-4" /> Back to Command Center
-            </Link>
-          </div>
-
           <section className="max-w-7xl mx-auto px-6 mb-16">
             <div className="flex items-center gap-4 mb-4">
                <Terminal className="w-8 h-8 text-primary" />
