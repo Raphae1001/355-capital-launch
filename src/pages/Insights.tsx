@@ -47,7 +47,7 @@ export default function Insights() {
           <section className="max-w-7xl mx-auto px-6 mb-16">
             <div className="flex items-center gap-4 mb-4">
                <Terminal className="w-8 h-8 text-primary" />
-               <p className="font-mono-data text-primary tracking-widest uppercase text-sm">/Intelligence_Feed_04</p>
+               <p className="font-mono-data text-primary tracking-widest uppercase text-sm">/Intelligence_Feed</p>
             </div>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
               Insights & Memos
