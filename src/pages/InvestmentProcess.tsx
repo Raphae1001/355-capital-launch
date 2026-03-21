@@ -39,7 +39,7 @@ export default function InvestmentProcess() {
 
           {/* Hero */}
           <section className="max-w-7xl mx-auto px-6 mb-24">
-            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Investment_Process_01</p>
+            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Investment_Process</p>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
               Investment Process
             </h1>
