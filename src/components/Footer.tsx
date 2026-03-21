@@ -10,7 +10,7 @@ const Footer = () => (
           <span className="text-xs font-medium tracking-[0.3em] uppercase text-muted-foreground">Capital</span>
         </span>
         <p className="text-sm text-muted-foreground mt-4 max-w-xs leading-relaxed">
-          Venture capital at the intersection of defense, cybersecurity, AI, and space.
+          Venture capital at the intersection of defense, cybersecurity, AI & Robotics, Energy, Aerospace.
         </p>
       </div>
 
