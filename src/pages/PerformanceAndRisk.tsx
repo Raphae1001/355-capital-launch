@@ -261,7 +261,7 @@ export default function PerformanceAndRisk() {
           </section>
 
           <section className="max-w-7xl mx-auto px-6 mb-16">
-            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Risk_Management_03</p>
+            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Risk_Management</p>
             <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
               RISK MANAGEMENT
             </h2>
