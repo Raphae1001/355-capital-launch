@@ -74,7 +74,7 @@ const Navbar = () => {
         {/* Mobile Hamburger Button */}
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="lg:hidden relative z-[101] text-foreground p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px]"
+          className="lg:hidden relative z-[301] text-foreground p-2 -mr-2 flex items-center justify-center min-h-[44px] min-w-[44px]"
           aria-label="Toggle menu"
         >
           {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -93,7 +93,7 @@ const Navbar = () => {
               animate={{ y: 0 }}
               exit={{ y: -16 }}
               transition={{ duration: 0.2, ease: "easeOut" }}
-              className="relative flex min-h-screen flex-col bg-black px-6 pb-6 pt-24"
+              className="relative flex min-h-[100dvh] flex-col overflow-y-auto bg-black px-6 pt-24 pb-[calc(env(safe-area-inset-bottom)+2rem)]"
               style={{ backgroundColor: "#000000" }}
             >
               <div className="flex flex-col gap-6 flex-1">
@@ -107,7 +107,7 @@ const Navbar = () => {
                   </Link>
                 ))}
               </div>
-              <div className="mt-auto">
+              <div className="mt-8 pt-4">
                 <Link
                   to="/login"
                   className="flex items-center justify-center w-full text-base font-medium min-h-[56px] rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200"
