@@ -84,34 +84,39 @@ const Navbar = () => {
       {/* Mobile Menu Drawer */}
       <AnimatePresence>
         {isMobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="fixed inset-0 z-[100] bg-black lg:hidden flex flex-col pt-24 px-6 pb-6"
-            style={{ backgroundColor: "#000000" }}
+          <div
+            className="fixed inset-0 z-[200] bg-black lg:hidden"
+            style={{ backgroundColor: "#000000", opacity: 1 }}
           >
-            <div className="flex flex-col gap-6 flex-1">
-              {siteNavLinks.map((link) => (
+            <motion.div
+              initial={{ y: -16 }}
+              animate={{ y: 0 }}
+              exit={{ y: -16 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="relative flex min-h-screen flex-col bg-black px-6 pb-6 pt-24"
+              style={{ backgroundColor: "#000000" }}
+            >
+              <div className="flex flex-col gap-6 flex-1">
+                {siteNavLinks.map((link) => (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="py-2 border-b border-border/50 text-2xl font-bold leading-tight whitespace-pre-line text-foreground hover:text-primary transition-colors duration-200"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+              <div className="mt-auto">
                 <Link
-                  key={link.label}
-                  to={link.href}
-                  className="py-2 border-b border-border/50 text-2xl font-bold leading-tight whitespace-pre-line text-foreground hover:text-primary transition-colors duration-200"
+                  to="/login"
+                  className="flex items-center justify-center w-full text-base font-medium min-h-[56px] rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200"
                 >
-                  {link.label}
+                  Investor Login
                 </Link>
-              ))}
-            </div>
-            <div className="mt-auto">
-              <Link
-                to="/login"
-                className="flex items-center justify-center w-full text-base font-medium min-h-[56px] rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-200"
-              >
-                Investor Login
-              </Link>
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
     </motion.header>
