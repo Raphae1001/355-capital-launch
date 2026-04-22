@@ -27,8 +27,12 @@ const activeDeals = [
   { name: "[CyberSec Secondary]", status: "Not yet", type: "Secondary" },
   { name: "Yubo", status: "Not yet", type: "Primary" },
   { name: "Gorgias", status: "Not yet", type: "Primary" },
-  { name: "Shade", status: "Not yet", type: "Primary" },
-  { name: "Helios", status: "Not yet", type: "Primary" },
+  { name: "Stripe", status: "Not yet", type: "Primary" },
+  { name: "SpaceX", status: "Not yet", type: "Primary" },
+  { name: "Databricks", status: "Not yet", type: "Primary" },
+  { name: "Neuralink", status: "Not yet", type: "Primary" },
+  { name: "Xtend", status: "Not yet", type: "Primary" },
+  { name: "SENAI", status: "Not yet", type: "Primary" },
 ];
 
 const riskPillars = [
