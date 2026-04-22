@@ -5,12 +5,6 @@ import { Target, Clock, CheckCircle2, DoorOpen, Lock } from "lucide-react";
 import { CountUpNumber } from "@/components/CountUpNumber";
 
 const activeDeals = [
-  { name: "[Undisclosed AI Infra]", status: "Not yet", type: "Primary" },
-  { name: "Medadom", status: "Not yet", type: "Primary" },
-  { name: "Mega-biopharma", status: "Not yet", type: "Primary" },
-  { name: "[Defense Systems Alpha]", status: "Not yet", type: "Primary" },
-  { name: "[SpaceTech Orbital]", status: "Not yet", type: "Primary" },
-  { name: "[CyberSec Secondary]", status: "Not yet", type: "Secondary" },
   { name: "Yubo", status: "Not yet", type: "Primary" },
   { name: "Gorgias", status: "Not yet", type: "Primary" },
   { name: "Stripe", status: "Not yet", type: "Primary" },
@@ -19,6 +13,8 @@ const activeDeals = [
   { name: "Neuralink", status: "Not yet", type: "Primary" },
   { name: "Xtend", status: "Not yet", type: "Primary" },
   { name: "SENAI", status: "Not yet", type: "Primary" },
+  { name: "Medadom", status: "Not yet", type: "Primary" },
+  { name: "Mega-biopharma", status: "Not yet", type: "Primary" },
 ];
 
 export default function TrackRecord() {
