@@ -39,7 +39,7 @@ const InvestmentProcessSection = () => (
           <ScrollReveal delay={0.2}>
             <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight mt-8 lg:mt-0">How we invest</h2>
             <p className="text-muted-foreground mt-4 leading-relaxed">
-              A hybrid model blending primary and secondary positions for optimal risk-adjusted returns.
+              A hybrid model blending primary and secondary positions for disciplined risk-adjusted outcomes.
             </p>
           </ScrollReveal>
           <div className="mt-10 space-y-4">
@@ -67,7 +67,7 @@ const InvestmentProcessSection = () => (
                   <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-zinc-300" /> Active risk management</li>
                   <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-zinc-300" /> Partial exits starting at Series A / B</li>
                   <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-zinc-300" /> Greater portfolio liquidity</li>
-                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-zinc-300" /> Enhanced long-term performance</li>
+                  <li className="flex items-start gap-3"><span className="mt-1.5 w-2 h-2 rounded-full bg-zinc-300" /> Enhanced long-term portfolio resilience</li>
                 </ul>
               </GlassCard>
             </ScrollReveal>

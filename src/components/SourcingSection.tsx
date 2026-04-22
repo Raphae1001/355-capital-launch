@@ -14,7 +14,7 @@ const SourcingSection = () => (
       <ScrollReveal>
         <p className="text-xs font-mono-data tracking-[0.3em] uppercase text-primary mb-4">Sourcing</p>
         <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight max-w-xl">
-          Access drives performance
+          Access drives selectivity
         </h2>
         <p className="text-lg text-muted-foreground mt-6 max-w-lg">
           We see what others don't. Our unique sourcing engine surfaces exceptional opportunities before the market.

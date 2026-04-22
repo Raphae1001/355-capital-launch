@@ -18,7 +18,7 @@ const memos = [
     title: "Capital Recycling Strategies in Seed & Series A",
     date: "28 FEB 2026",
     id: "RPT_M22",
-    excerpt: "Examining our approach to early secondary exits. How de-risking positions mechanically improves fund IRR without capping upside on hyper-growth outliers.",
+    excerpt: "Examining our approach to early secondary exits. How de-risking positions improve liquidity mechanics without capping upside on hyper-growth outliers.",
     readTime: "7 MIN"
   },
   {

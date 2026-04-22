@@ -4,7 +4,7 @@ import { Eye, BarChart3, Handshake } from "lucide-react";
 
 const benefits = [
   { icon: Eye, title: "Portfolio visibility", desc: "Access to portfolio metrics and company updates." },
-  { icon: BarChart3, title: "Performance reporting", desc: "Institutional-grade quarterly reports with full transparency." },
+  { icon: BarChart3, title: "Portfolio reporting", desc: "Institutional-grade quarterly reports with full transparency." },
   { icon: Handshake, title: "Co-investment opportunities", desc: "Direct access to follow-on rounds in our highest-conviction positions." },
 ];
 
