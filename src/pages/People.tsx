@@ -30,7 +30,7 @@ export default function People() {
                   <img 
                     src="/florian.jpg" 
                     alt="Florian Seroussi" 
-                    className="w-full h-full object-cover grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover object-[center_18%] grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl">
                     <h2 className="text-2xl font-bold text-zinc-100">Florian Seroussi</h2>
@@ -50,11 +50,11 @@ export default function People() {
                   </div>
                   <div>
                      <p className="text-3xl font-bold text-primary font-mono-data">10</p>
-                     <p className="text-sm text-zinc-500 uppercase font-mono-data mt-1">Unicorns</p>
+                     <p className="text-sm text-zinc-500 uppercase font-mono-data mt-1">Core Themes</p>
                   </div>
                   <div>
                      <p className="text-3xl font-bold text-zinc-100 font-mono-data">26</p>
-                     <p className="text-sm text-zinc-500 uppercase font-mono-data mt-1">Exits</p>
+                     <p className="text-sm text-zinc-500 uppercase font-mono-data mt-1">Portfolio Milestones</p>
                   </div>
                 </div>
                 
@@ -91,7 +91,7 @@ export default function People() {
                   <img 
                     src="/bernard.png" 
                     alt="Bernard Kalfon" 
-                    className="w-full h-full object-cover grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full h-full object-cover object-[center_14%] grayscale-0 lg:grayscale group-hover:grayscale-0 transition-all duration-700"
                   />
                   <div className="absolute bottom-4 left-4 right-4 bg-zinc-950/90 backdrop-blur-md border border-zinc-800 p-4 rounded-xl">
                     <h2 className="text-2xl font-bold text-zinc-100">Bernard Kalfon</h2>

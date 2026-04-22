@@ -82,13 +82,13 @@ export default function InvestmentProcess() {
                   <span className="text-zinc-200 font-mono-data text-xs px-3 py-1 bg-zinc-100/10 border border-zinc-200/15 rounded-full">OPPORTUNISTIC</span>
                 </h3>
                 <p className="text-zinc-400 leading-relaxed mb-6">
-                  Selective entry into proven winners at attractive valuations. Our <strong className="text-zinc-200">Capital Recycling</strong> approach de-risks our exposure and secures early liquidity for optimal IRR.
+                  Selective entry into proven winners at attractive valuations. Our <strong className="text-zinc-200">Capital Recycling</strong> approach de-risks our exposure and secures early liquidity with institutional discipline.
                 </p>
                 <ul className="space-y-3 text-sm text-zinc-300">
                   <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-zinc-300" /> Active risk management</li>
                   <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-zinc-300" /> Partial exits starting at Series A / B</li>
                   <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-zinc-300" /> Greater portfolio liquidity</li>
-                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-zinc-300" /> Enhanced long-term performance</li>
+                  <li className="flex items-center gap-3"><span className="w-2 h-2 rounded-full bg-zinc-300" /> Enhanced long-term portfolio resilience</li>
                 </ul>
               </div>
             </div>

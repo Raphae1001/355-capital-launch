@@ -1,10 +1,10 @@
 import ScrollReveal from "./ScrollReveal";
 
 const metrics = [
-  { value: "65+", label: "Total Investments" },
-  { value: "10", label: "Unicorns" },
-  { value: "26", label: "Exits" },
-  { value: "18", label: "Secondary Exits" },
+  { value: "65+", label: "Investments", note: "" },
+  { value: "36 months", label: "Time to Liquidity (TTL)", note: "" },
+  { value: "17*", label: "Total Exits", note: "*see TTL" },
+  { value: "18", label: "Secondary deals", note: "" },
 ];
 
 const TrackRecordSection = () => (
@@ -13,7 +13,7 @@ const TrackRecordSection = () => (
       <ScrollReveal>
         <p className="text-xs font-mono-data tracking-[0.3em] uppercase text-primary mb-4">Track Record</p>
         <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
-          Performance you can measure
+          Portfolio Overview
         </h2>
       </ScrollReveal>
 
@@ -27,6 +27,9 @@ const TrackRecordSection = () => (
               <div className="text-sm text-muted-foreground mt-3 uppercase tracking-widest">
                 {m.label}
               </div>
+              {m.note ? (
+                <div className="text-[11px] text-muted-foreground mt-1 font-mono-data">{m.note}</div>
+              ) : null}
             </div>
           </ScrollReveal>
         ))}

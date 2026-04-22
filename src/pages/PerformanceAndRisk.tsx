@@ -14,30 +14,21 @@ import {
   ShieldCheck,
   SlidersHorizontal,
   Target,
-  Trophy,
+  Lock,
 } from "lucide-react";
 import { CountUpNumber } from "@/components/CountUpNumber";
 
 const activeDeals = [
-  { name: "[Undisclosed AI Infra]", status: "Not yet", irr: "x4.2", type: "Primary" },
-  { name: "Medadom", status: "Not yet", irr: "x11", type: "Primary" },
-  { name: "Mega-biopharma", status: "Not yet", irr: "x7", type: "Primary" },
-  { name: "[Defense Systems Alpha]", status: "Not yet", irr: "TBD", type: "Primary" },
-  { name: "[SpaceTech Orbital]", status: "Not yet", irr: "x15", type: "Primary" },
-  { name: "[CyberSec Secondary]", status: "Not yet", irr: "TBD", type: "Secondary" },
-  { name: "Yubo", status: "Not yet", irr: "x34", type: "Primary" },
-  { name: "Gorgias", status: "Not yet", irr: "x42", type: "Primary" },
-  { name: "Shade", status: "Not yet", irr: "x5", type: "Primary" },
-  { name: "Helios", status: "Not yet", irr: "TBD", type: "Primary" },
-];
-
-const historicalExits = [
-  { name: "Global Roaming", status: "IPO - 2007", irr: "x20", type: "Primary" },
-  { name: "Weebly", status: "2018", irr: "x25", type: "Primary" },
-  { name: "Pixowl", status: "2018", irr: "x12", type: "Primary" },
-  { name: "Open Garden", status: "2016", irr: "x31", type: "Primary" },
-  { name: "[SaaS Enterprise]", status: "Secondary Exit", irr: "x3.5", type: "Secondary" },
-  { name: "[Energy Grid Beta]", status: "Acquired", irr: "x2.1", type: "Primary" },
+  { name: "[Undisclosed AI Infra]", status: "Not yet", type: "Primary" },
+  { name: "Medadom", status: "Not yet", type: "Primary" },
+  { name: "Mega-biopharma", status: "Not yet", type: "Primary" },
+  { name: "[Defense Systems Alpha]", status: "Not yet", type: "Primary" },
+  { name: "[SpaceTech Orbital]", status: "Not yet", type: "Primary" },
+  { name: "[CyberSec Secondary]", status: "Not yet", type: "Secondary" },
+  { name: "Yubo", status: "Not yet", type: "Primary" },
+  { name: "Gorgias", status: "Not yet", type: "Primary" },
+  { name: "Shade", status: "Not yet", type: "Primary" },
+  { name: "Helios", status: "Not yet", type: "Primary" },
 ];
 
 const riskPillars = [
@@ -114,12 +105,12 @@ export default function PerformanceAndRisk() {
 
         <main className="pt-32 pb-24">
           <section className="max-w-7xl mx-auto px-6 mb-24">
-            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Performance_And_Risk</p>
+            <p className="font-mono-data text-primary mb-4 tracking-widest uppercase text-sm">/Track_Record_And_Risk</p>
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-zinc-100">
               TRACK RECORD
             </h1>
             <p className="text-xl text-zinc-400 max-w-3xl leading-relaxed mb-16">
-              Proven performance and disciplined downside management presented in a single institutional view.
+              Portfolio overview and disciplined downside management presented in a single institutional view.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
@@ -129,19 +120,20 @@ export default function PerformanceAndRisk() {
                 <p className="text-zinc-500 text-sm font-mono-data uppercase">Investments</p>
               </div>
               <div className="border border-zinc-800/60 bg-zinc-900/30 p-6 rounded-xl">
-                <Trophy className="w-6 h-6 text-primary mb-4" />
-                <CountUpNumber end={10} duration={2.5} className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2" />
-                <p className="text-zinc-500 text-sm font-mono-data uppercase">Unicorns</p>
+                <Clock className="w-6 h-6 text-primary mb-4" />
+                <p className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2 font-mono-data">36 months</p>
+                <p className="text-zinc-500 text-sm font-mono-data uppercase">Time to Liquidity (TTL)</p>
               </div>
               <div className="border border-zinc-800/60 bg-zinc-900/30 p-6 rounded-xl">
                 <CheckCircle2 className="w-6 h-6 text-primary mb-4" />
-                <CountUpNumber end={26} duration={2.5} className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2" />
+                <p className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2 font-mono-data">17*</p>
                 <p className="text-zinc-500 text-sm font-mono-data uppercase">Total Exits</p>
+                <p className="text-zinc-500 text-[11px] font-mono-data mt-1">*see TTL</p>
               </div>
               <div className="border border-zinc-800/60 bg-zinc-900/30 p-6 rounded-xl">
-                <Clock className="w-6 h-6 text-primary mb-4" />
+                <DoorOpen className="w-6 h-6 text-primary mb-4" />
                 <CountUpNumber end={18} duration={2.5} className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2" />
-                <p className="text-zinc-500 text-sm font-mono-data uppercase">Secondary Exits</p>
+                <p className="text-zinc-500 text-sm font-mono-data uppercase">Secondary deals</p>
               </div>
             </div>
           </section>
@@ -149,51 +141,25 @@ export default function PerformanceAndRisk() {
           <section className="max-w-7xl mx-auto px-6 mb-32">
             <h2 className="text-2xl font-bold text-zinc-100 mb-8 border-b border-zinc-800 pb-4">Selected Investments</h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              <div className="w-full overflow-x-auto pb-4">
-                <div className="min-w-[500px]">
+            <div className="w-full overflow-hidden pb-2">
+                <div className="w-full">
                   <div className="bg-primary/20 border-b-2 border-primary py-3 px-4 mb-2 flex justify-between uppercase font-mono-data text-sm text-zinc-100">
-                    <div className="w-1/2">Investment</div>
-                    <div className="w-1/4 text-center">Exit</div>
-                    <div className="w-1/4 text-right">IRR</div>
+                    <div className="w-2/3">Investment</div>
+                    <div className="w-1/3 text-right">Exit / Status</div>
                   </div>
                   <div className="space-y-1">
                     {activeDeals.map((deal, i) => (
-                      <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
-                        <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
+                      <div key={i} className="flex justify-between items-start sm:items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm gap-3">
+                        <div className="w-2/3 font-medium text-zinc-100 flex flex-col gap-1">
                           {deal.name}
                           {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-zinc-200 bg-zinc-100/10 border border-zinc-200/15 px-1.5 py-0.5 w-fit rounded">SECONDARY ENTRY</span>}
                         </div>
-                        <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
-                        <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>
+                        <div className="w-1/3 text-right text-zinc-400 text-sm">{deal.status}</div>
                       </div>
                     ))}
                   </div>
                 </div>
               </div>
-
-              <div className="w-full overflow-x-auto pb-4">
-                <div className="min-w-[500px]">
-                  <div className="bg-primary/20 border-b-2 border-primary py-3 px-4 mb-2 flex justify-between uppercase font-mono-data text-sm text-zinc-100">
-                    <div className="w-1/2">Historical Exits</div>
-                    <div className="w-1/4 text-center">Exit</div>
-                    <div className="w-1/4 text-right">IRR</div>
-                  </div>
-                  <div className="space-y-1">
-                    {historicalExits.map((deal, i) => (
-                      <div key={i} className="flex justify-between items-center py-3 px-4 bg-zinc-900/40 border border-zinc-800/50 hover:bg-zinc-800/50 transition-colors rounded-sm">
-                        <div className="w-1/2 font-medium text-zinc-100 flex flex-col gap-1">
-                          {deal.name}
-                          {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-zinc-200 bg-zinc-100/10 border border-zinc-200/15 px-1.5 py-0.5 w-fit rounded">SECONDARY EXIT</span>}
-                        </div>
-                        <div className="w-1/4 text-center text-zinc-400 text-sm">{deal.status}</div>
-                        <div className="w-1/4 text-right font-mono-data font-bold text-primary">{deal.irr}</div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
           </section>
 
           <section className="max-w-7xl mx-auto px-6 mb-16">
@@ -238,6 +204,10 @@ export default function PerformanceAndRisk() {
 
             <div className="bg-zinc-900/50 border border-zinc-800 rounded-2xl p-8 md:p-12 relative overflow-hidden">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(14,165,233,0.05),transparent_50%)] pointer-events-none" />
+              <div className="relative z-10 inline-flex items-center gap-2 mb-8 px-3 py-1.5 rounded-full border border-zinc-700/80 bg-zinc-900/80 text-zinc-300 text-xs font-mono-data tracking-wide">
+                <Lock className="w-3.5 h-3.5 text-primary" />
+                <span>Available on request</span>
+              </div>
 
               <div className="flex items-center gap-4 mb-12">
                 <div className="w-12 h-12 bg-zinc-800/80 rounded-xl flex items-center justify-center border border-zinc-700">
@@ -249,7 +219,7 @@ export default function PerformanceAndRisk() {
                 </div>
               </div>
 
-              <div className="relative border-l border-zinc-800 ml-4 md:ml-6 space-y-12 pb-4">
+              <div className="relative border-l border-zinc-800 ml-4 md:ml-6 space-y-12 pb-4 blur-[6px] md:blur-[8px] select-none pointer-events-none">
                 <div className="relative pl-8 md:pl-12">
                   <div className="absolute w-3 h-3 bg-zinc-950 border-2 border-zinc-500 rounded-full -left-[6.5px] top-1.5" />
                   <p className="font-mono-data text-zinc-500 text-sm mb-2">May 2017</p>

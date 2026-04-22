@@ -5,8 +5,8 @@ import { useEffect, useRef, useState } from "react";
 
 const stats = [
   { value: "65+", label: "Investments" },
-  { value: "10", label: "Unicorns" },
-  { value: "26", label: "Exits" },
+  { value: "36 months", label: "Time to Liquidity (TTL)" },
+  { value: "18", label: "Secondary deals" },
 ];
 
 const verticals = ["Defense", "Cyber security", "AI & Robotics", "Energy", "Aerospace"];
@@ -93,7 +93,7 @@ const HeroSection = () => {
         >
           Access to exceptional deals.{" "}
           <span className="text-muted-foreground">Risk, actively managed.</span>{" "}
-          <span className="gradient-text">Returns, consistently delivered.</span>
+          <span className="gradient-text">Discipline, consistently applied.</span>
         </motion.h1>
 
         {/* Value prop */}
@@ -103,7 +103,7 @@ const HeroSection = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="mt-8 text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed"
         >
-          A venture fund combining proprietary deal flow, active risk management, and proven performance.
+          A venture fund combining proprietary deal flow, active risk management, and institutional portfolio discipline.
         </motion.p>
 
         {/* CTAs */}
