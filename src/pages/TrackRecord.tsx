@@ -73,7 +73,13 @@ export default function TrackRecord() {
                               {deal.name}
                               {deal.type === "Secondary" && <span className="text-[10px] font-mono-data text-zinc-200 bg-zinc-100/10 border border-zinc-200/15 px-1.5 py-0.5 w-fit rounded">SECONDARY ENTRY</span>}
                            </div>
-                           <div className="w-1/3 text-right text-zinc-400 text-sm">{deal.status}</div>
+                           <div
+                              className={`w-1/3 text-right text-zinc-400 text-sm ${
+                                deal.status === "Not yet" ? "blur-[5px] select-none" : ""
+                              }`}
+                           >
+                              {deal.status}
+                           </div>
                         </div>
                       ))}
                    </div>
