@@ -1,7 +1,7 @@
 {
   "name": "355 Capital",
   "short_name": "355 Capital",
-  "description": "Venture capital at the intersection of defense, cybersecurity, AI & robotics, energy, and aerospace.",
+  "description": "A venture fund combining proprietary deal flow, active risk management, and institutional portfolio discipline.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -9,20 +9,19 @@
   "theme_color": "#09090b",
   "icons": [
     {
-      "src": "/android-chrome-192x192-355-v3.png",
+      "src": "/android-chrome-192x192.png?v=3",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/android-chrome-512x512-355-v3.png",
+      "src": "/android-chrome-512x512.png?v=3",
       "sizes": "512x512",
       "type": "image/png"
     },
     {
-      "src": "/favicon-355-v3.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
-      "purpose": "any"
+      "src": "/apple-touch-icon.png?v=3",
+      "sizes": "180x180",
+      "type": "image/png"
     }
   ]
 }
