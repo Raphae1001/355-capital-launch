@@ -1,27 +1,13 @@
 {
   "headers": [
     {
-      "source": "/(favicon.*|apple-touch-icon.*|android-chrome.*|manifest.*|site.*\\.webmanifest|safari-pinned-tab.*)",
+      "source": "/(.*\\.(ico|png|svg|webmanifest|json))",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
-        },
-        {
-          "key": "Pragma",
-          "value": "no-cache"
-        },
-        {
-          "key": "Expires",
-          "value": "0"
+          "value": "public, max-age=0, must-revalidate"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
     }
   ]
 }
