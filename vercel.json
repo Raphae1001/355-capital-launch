@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/(.*\\.(ico|png|svg|webmanifest|json))",
+      "source": "/(favicon.*|apple-touch-icon.*|android-chrome.*|manifest.*|site.*\\.webmanifest|safari-pinned-tab.*|355-capital-.*)",
       "headers": [
         {
           "key": "Cache-Control",
