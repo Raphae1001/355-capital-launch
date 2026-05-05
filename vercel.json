@@ -12,11 +12,6 @@
   ],
   "redirects": [
     {
-      "source": "/favicon.ico",
-      "destination": "/355-capital-favicon.ico",
-      "permanent": false
-    },
-    {
       "source": "/apple-touch-icon.png",
       "destination": "/355-capital-apple.png",
       "permanent": false
