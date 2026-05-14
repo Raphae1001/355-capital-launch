@@ -74,7 +74,7 @@
   }
 
   .gradient-text {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-500 via-sky-300 to-zinc-100;
+    @apply text-sky-400;
   }
 
   .gradient-border {
