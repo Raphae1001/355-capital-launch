@@ -28,7 +28,7 @@ const activeDeals = [
   { name: "Xtend", status: "Not yet", type: "Primary" },
   { name: "SENAI", status: "Not yet", type: "Primary" },
   { name: "Medadom", status: "Not yet", type: "Primary" },
-  { name: "Mega-biopharma", status: "Not yet", type: "Primary" },
+  { name: "…", status: "", type: "" },
 ];
 
 const riskPillars = [

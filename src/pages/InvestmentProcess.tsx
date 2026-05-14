@@ -148,10 +148,7 @@ export default function InvestmentProcess() {
                </div>
                <div>
                  <h3 className="text-xl font-bold text-zinc-100 mb-2">Innovative Referral Program</h3>
-                 <p className="text-zinc-400">
-                   1% of carry deducted for each new investor successfully onboarded (min $100k). 
-                   Up to 10 referrals per LP.
-                 </p>
+                 <p className="text-zinc-400">On request</p>
                </div>
             </div>
           </section>
