@@ -89,10 +89,10 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight max-w-5xl"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.1] tracking-tight max-w-6xl flex flex-col gap-1"
         >
-          Access to exceptional deals.{" "}
-          <span className="text-muted-foreground">Risk, actively managed.</span>{" "}
+          <span>Access to exceptional deals.</span>
+          <span className="text-muted-foreground">Risk, actively managed.</span>
           <span className="gradient-text">Discipline, consistently applied.</span>
         </motion.h1>
 
