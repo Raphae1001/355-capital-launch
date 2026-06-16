@@ -34,7 +34,7 @@ export default function TrackRecord() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
               <div className="border border-zinc-800/60 bg-zinc-900/30 p-6 rounded-xl">
                 <Target className="w-6 h-6 text-primary mb-4" />
-                <CountUpNumber end={65} suffix="+" duration={2.5} className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2" />
+                <CountUpNumber end={58} suffix="+" duration={2.5} className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2" />
                 <p className="text-zinc-500 text-sm font-mono-data uppercase">Investments</p>
               </div>
               <div className="border border-zinc-800/60 bg-zinc-900/30 p-6 rounded-xl">
@@ -44,13 +44,12 @@ export default function TrackRecord() {
               </div>
               <div className="border border-zinc-800/60 bg-zinc-900/30 p-6 rounded-xl">
                 <CheckCircle2 className="w-6 h-6 text-primary mb-4" />
-                <p className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2 font-mono-data">17*</p>
-                <p className="text-zinc-500 text-sm font-mono-data uppercase">Total Exits</p>
-                <p className="text-zinc-500 text-[11px] font-mono-data mt-1">*see TTL</p>
+                <CountUpNumber end={26} suffix="+" duration={2.5} className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2" />
+                <p className="text-zinc-500 text-sm font-mono-data uppercase">Partial / Total Exits</p>
               </div>
               <div className="border border-zinc-800/60 bg-zinc-900/30 p-6 rounded-xl">
                 <DoorOpen className="w-6 h-6 text-primary mb-4" />
-                <CountUpNumber end={18} duration={2.5} className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2" />
+                <CountUpNumber end={12} suffix="+" duration={2.5} className="text-4xl md:text-5xl font-bold text-zinc-100 mb-2" />
                 <p className="text-zinc-500 text-sm font-mono-data uppercase">Secondary deals</p>
               </div>
             </div>

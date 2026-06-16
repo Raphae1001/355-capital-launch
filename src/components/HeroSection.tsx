@@ -4,9 +4,9 @@ import { ArrowRight, ArrowUp, Lock } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: "65+", label: "Investments" },
+  { value: "58+", label: "Investments" },
   { value: "36 months", label: "Time to Liquidity (TTL)" },
-  { value: "18", label: "Secondary deals" },
+  { value: "12+", label: "Secondary deals" },
 ];
 
 const verticals = ["Defense", "Cyber security", "AI & Robotics", "Energy", "Aerospace"];

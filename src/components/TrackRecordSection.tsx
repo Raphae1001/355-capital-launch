@@ -1,10 +1,10 @@
 import ScrollReveal from "./ScrollReveal";
 
 const metrics = [
-  { value: "65+", label: "Investments", note: "" },
+  { value: "58+", label: "Investments", note: "" },
   { value: "36 months", label: "Time to Liquidity (TTL)", note: "" },
-  { value: "17*", label: "Total Exits", note: "*see TTL" },
-  { value: "18", label: "Secondary deals", note: "" },
+  { value: "26+", label: "Partial / Total Exits", note: "" },
+  { value: "12+", label: "Secondary deals", note: "" },
 ];
 
 const TrackRecordSection = () => (
