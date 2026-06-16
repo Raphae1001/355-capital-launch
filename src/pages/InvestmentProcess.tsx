@@ -121,15 +121,15 @@ export default function InvestmentProcess() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
               {[
                 { label: "TYPE", value: "Early-Stage VC Fund" },
-                { label: "TARGET SIZE", value: "US$ 50M", sub: "Soft Cap: US$ 30M" },
-                { label: "TARGET INVESTMENTS", value: "50-80", sub: "Portfolio Companies" },
-                { label: "TERM", value: "5 Years", sub: "+ 2 one-year extensions" },
-                { label: "TICKET SIZE", value: "$250k - $1M*" },
-                { label: "SET-UP FEE", value: "0%" },
+                { label: "TARGET SIZE", value: "$25M", sub: "$15M soft cap" },
+                { label: "PORTFOLIO", value: "~50", sub: "Portfolio Companies" },
+                { label: "TERM", value: "5 yrs", sub: "+ 2" },
+                { label: "MIN TICKET", value: "$250k" },
+                { label: "SET-UP FEE", value: "$2k", sub: "one-time" },
                 { label: "MANAGEMENT FEES", value: "2%" },
                 { label: "CARRIED INTEREST", value: "20%" },
                 { label: "INVESTOR CASH BACK", value: "100%" },
-                { label: "GP COMMITMENT", value: "5%" },
+                { label: "GP COMMITMENT", value: "up to 10%" },
                 { label: "INSTRUMENT & TERMS", value: "SAFE or Equity", sub: "No loans or standard convertible notes" },
               ].map((item, idx) => (
                 <div key={idx} className="border border-zinc-800 p-6 rounded-xl bg-zinc-950/80 hover:bg-zinc-900/50 transition-colors">

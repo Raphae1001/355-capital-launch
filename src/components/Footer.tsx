@@ -31,7 +31,7 @@ const Footer = () => (
           <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">Contact</p>
           <div className="flex flex-col gap-2">
             <a href="mailto:fs@355cap.com" className="text-sm font-mono-data text-foreground/70 hover:text-primary transition-colors">fs@355cap.com</a>
-            <a href="mailto:bk@355cap.com" className="text-sm font-mono-data text-foreground/70 hover:text-primary transition-colors">bk@355cap.com</a>
+            <a href="mailto:bek@355cap.com" className="text-sm font-mono-data text-foreground/70 hover:text-primary transition-colors">bek@355cap.com</a>
           </div>
         </div>
       </div>

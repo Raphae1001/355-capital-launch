@@ -45,7 +45,7 @@ export default function People() {
                      <p className="text-sm text-zinc-500 uppercase font-mono-data mt-1">Years Exp</p>
                   </div>
                   <div>
-                     <p className="text-3xl font-bold text-zinc-100 font-mono-data">65+</p>
+                     <p className="text-3xl font-bold text-zinc-100 font-mono-data">58+</p>
                      <p className="text-sm text-zinc-500 uppercase font-mono-data mt-1">Investments</p>
                   </div>
                   <div>
@@ -53,8 +53,8 @@ export default function People() {
                      <p className="text-sm text-zinc-500 uppercase font-mono-data mt-1">Core Themes</p>
                   </div>
                   <div>
-                     <p className="text-3xl font-bold text-zinc-100 font-mono-data">26</p>
-                     <p className="text-sm text-zinc-500 uppercase font-mono-data mt-1">Portfolio Milestones</p>
+                     <p className="text-3xl font-bold text-zinc-100 font-mono-data">26+</p>
+                     <p className="text-sm text-zinc-500 uppercase font-mono-data mt-1">Partial / Total Exits</p>
                   </div>
                 </div>
                 
@@ -63,7 +63,7 @@ export default function People() {
                     Florian Seroussi is a Managing General Partner and Co-Founder at 355 Capital with a global investing and advisory track record. Known for writing the <strong className="text-primary font-medium">"First Check"</strong>, he has uniquely identified 10 unicorns at pre-seed and seed stages.
                   </p>
                   <p>
-                    He has invested in over 65 tech startups, including Producteev (sold to Jive), Weebly (sold to Square), Yubo, Sandbox (sold to Animoca), Gorgias, AfterSchool, Open Garden, and Shade.io. Prior to joining 355 Capital, Florian co-founded One More Company Group, Evercontact, and Global Roaming (IPO'd in 2006).
+                    He has invested in over 58 tech startups, including Producteev (sold to Jive), Weebly (sold to Square), Yubo, Sandbox (sold to Animoca), Gorgias, AfterSchool, Open Garden, and Shade.io. Prior to joining 355 Capital, Florian co-founded One More Company Group, Evercontact, and Global Roaming (IPO'd in 2006).
                   </p>
                   <p>
                     Florian is an active voice in the ecosystem, contributing frequently to BFM TV, NYT, Forbes, Cheddar TV, and VentureBeat. He guides 355's strategy with a deep understanding of market dynamics across the internet and a personal passion to solve information overload.
